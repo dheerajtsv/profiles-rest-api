@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
  # boxes at https://vagrantcloud.com/search.
  config.vm.box = "ubuntu/bionic64"
  config.vm.box_version = "~> 20191107.0.0"
-
+ config.vm.synced_folder "D:/Development/Projects/profiles-rest-api", "/home/vagrant/profiles-rest-api"
  config.vm.network "forwarded_port", guest: 8000, host: 8000
 
  config.vm.provision "shell", inline: <<-SHELL
